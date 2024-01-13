@@ -1,6 +1,21 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
 
+-- Remap window navigation commands
+local window_nav = {"h", "j", "k", "l", "s", "v"}
+for _, key in ipairs(window_nav) do
+    vim.keymap.set("n", "<leader>w" .. key, "<C-w>" .. key)
+end
+
+-- new way to close a window
+vim.keymap.set("n", "<leader>wc", ":q<CR>")
+
+-- buffer mappings
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")
+vim.keymap.set("n", "<leader>bd", ":bd<CR>")
+vim.keymap.set("n", "<leader>bl", ":ls<CR>")
+
 -- Keep half jumps focused in the middle.
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
