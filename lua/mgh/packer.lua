@@ -20,6 +20,14 @@ return require('packer').startup(function(use)
 	  run = ':TSUpdate'
   }
 
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
+	  end
+  })
+
   -- Undo tree for viewing a diagram of how we got here
   use("mbbill/undotree")
   -- Its a kind of magit
