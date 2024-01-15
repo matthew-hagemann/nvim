@@ -32,6 +32,10 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   -- Its a kind of magit
   use("tpope/vim-fugitive")
+
+  -- comment stuff out
+  use("tpope/vim-commentary")
+
   use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
