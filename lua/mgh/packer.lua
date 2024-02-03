@@ -30,8 +30,6 @@ return require('packer').startup(function(use)
 
   -- Undo tree for viewing a diagram of how we got here
   use("mbbill/undotree")
-  -- Its a kind of magit
-  use("tpope/vim-fugitive")
 
   -- comment stuff out
   use("tpope/vim-commentary")
