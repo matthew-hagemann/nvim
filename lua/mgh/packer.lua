@@ -23,13 +23,13 @@ return require('packer').startup(function(use)
   -- Debugging
   use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
 
-  -- Dracula theme
+  -- Theme
   use({
-	  'dracula/vim',
-	  as = 'dracula',
-	  config = function()
-		  vim.cmd('colorscheme dracula')
-	  end
+    'Mofiqul/adwaita.nvim',
+    config = function()
+    vim.g.adwaita_darker = true             -- for darker version
+    vim.cmd('colorscheme adwaita')
+    end
   })
 
   -- Undo tree for viewing a diagram of how we got here
