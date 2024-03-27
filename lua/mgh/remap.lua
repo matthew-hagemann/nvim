@@ -10,11 +10,12 @@ end
 -- new way to close a window
 vim.keymap.set("n", "<leader>wc", ":q<CR>")
 
--- buffer mappings
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")
-vim.keymap.set("n", "<leader>bd", ":bd<CR>")
-vim.keymap.set("n", "<leader>bl", ":ls<CR>")
+-- Tabs
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>tt", ":tabnext<CR>")
+vim.keymap.set("n", "<leader>tm", ":tabmove ")
+vim.keymap.set("n", "<leader>tc", ":tabclose<CR>")
+vim.keymap.set("n", "<leader>to", ":tabonly<CR>")
 
 -- Keep half jumps focused in the middle.
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
