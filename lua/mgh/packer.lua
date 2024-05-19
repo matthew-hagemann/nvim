@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
   -- })
 
   use 'tanvirtin/monokai.nvim'
-
+  require('monokai').setup { palette = require('monokai') }
   -- Adwaita
   -- use({
   --   'Mofiqul/adwaita.nvim',
