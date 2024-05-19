@@ -24,13 +24,17 @@ return require('packer').startup(function(use)
   use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
 
   -- Theme
-   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
+   -- use({
+	  -- 'rose-pine/neovim',
+	  -- as = 'rose-pine',
+	  -- config = function()
+		  -- vim.cmd('colorscheme rose-pine')
+	  -- end
+  -- })
+
+  use 'tanvirtin/monokai.nvim'
+
+  -- Adwaita
   -- use({
   --   'Mofiqul/adwaita.nvim',
   --   config = function()
