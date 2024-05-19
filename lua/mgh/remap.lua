@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
+vim.keymap.set("n", "<leader>pp", ":Ex<CR>")
 
 -- Remap window navigation commands
 local window_nav = {"h", "j", "k", "l", "s", "v"}
