@@ -19,3 +19,10 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+
+-- Set Netrw to use a tree structure by default
+vim.g.netrw_liststyle = 3
+
+-- Remove the quickhelp banner 
+vim.g.netrw_banner = 0
+
