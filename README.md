@@ -1,5 +1,20 @@
 # init.lua
 
+## Installation
+
+Assuming you were good and installed the dotfiles how I asked in the README above:
+
+Install Packer:
+
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+Run `:PackerSync` from inside nvim
+
+You will need to see what lsp's are upset from there, glhf!
+
 ## Keybindings
 
 ### General
