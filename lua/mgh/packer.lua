@@ -21,6 +21,12 @@ return require("packer").startup(function(use)
 
 	-- formatter
 	use("mhartington/formatter.nvim")
+    
+    -- Stat line
+    use('freddiehaddad/feline.nvim')
+    require('feline').setup()
+
+
 
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
