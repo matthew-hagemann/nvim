@@ -2,23 +2,16 @@ local util = require("formatter.util")
 require("formatter").setup({
 	logging = true,
 
-	log_level = vim.log.levels.WARN,
+	log_level = vim.log.levels.DEBUG,
 	filetype = {
 		rust = {
 			require("formatter.filetypes.rust").rustfmt,
 		},
-	},
 
-
-
-
-	filetype = {
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},
-	},
 
-	filetype = {
 		go = {
 			require("formatter.filetypes.go").gofmt,
 		},

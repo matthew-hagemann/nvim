@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/freddiehaddad/feline.nvim"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -180,7 +190,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\né\3\0\0\5\0\22\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\2B\0\2\1K\0\1\0\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\4\0\0\t<cr>\n<tab>\18<2-leftmouse>\1\0\f\nclose\6q\tnext\6j\thelp\6?\19open_code_href\6c\fpreview\6p\19toggle_preview\6P\20switch_severity\6s\16toggle_mode\6m\frefresh\6r\nhover\6K\vcancel\n<esc>\rprevious\6k\1\0\3\nicons\1\nwidth\0032\vheight\3\20\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\né\3\0\0\5\0\22\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\2B\0\2\1K\0\1\0\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\4\0\0\t<cr>\n<tab>\18<2-leftmouse>\1\0\f\rprevious\6k\tnext\6j\vcancel\n<esc>\nhover\6K\19open_code_href\6c\fpreview\6p\19toggle_preview\6P\20switch_severity\6s\16toggle_mode\6m\thelp\6?\nclose\6q\frefresh\6r\1\0\3\vheight\3\20\nicons\1\nwidth\0032\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -200,7 +210,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\né\3\0\0\5\0\22\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\2B\0\2\1K\0\1\0\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\4\0\0\t<cr>\n<tab>\18<2-leftmouse>\1\0\f\nclose\6q\tnext\6j\thelp\6?\19open_code_href\6c\fpreview\6p\19toggle_preview\6P\20switch_severity\6s\16toggle_mode\6m\frefresh\6r\nhover\6K\vcancel\n<esc>\rprevious\6k\1\0\3\nicons\1\nwidth\0032\vheight\3\20\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\né\3\0\0\5\0\22\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\2B\0\2\1K\0\1\0\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\4\0\0\t<cr>\n<tab>\18<2-leftmouse>\1\0\f\rprevious\6k\tnext\6j\vcancel\n<esc>\nhover\6K\19open_code_href\6c\fpreview\6p\19toggle_preview\6P\20switch_severity\6s\16toggle_mode\6m\thelp\6?\nclose\6q\frefresh\6r\1\0\3\vheight\3\20\nicons\1\nwidth\0032\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false

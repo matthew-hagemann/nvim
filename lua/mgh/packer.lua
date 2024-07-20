@@ -1,5 +1,6 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
+vim.o.termguicolors = true
 
 return require("packer").startup(function(use)
 	-- Packer can manage itself
@@ -21,12 +22,6 @@ return require("packer").startup(function(use)
 
 	-- formatter
 	use("mhartington/formatter.nvim")
-    
-    -- Stat line
-    use('freddiehaddad/feline.nvim')
-    require('feline').setup()
-
-
 
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
