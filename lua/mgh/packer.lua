@@ -20,7 +20,8 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 	})
 
-    -- lualine
+	-- lualine
+	use("nvim-tree/nvim-web-devicons")
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
