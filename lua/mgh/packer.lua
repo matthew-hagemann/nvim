@@ -42,8 +42,12 @@ return require("packer").startup(function(use)
 	-- end
 	-- })
 
-	use("tanvirtin/monokai.nvim")
-	require("monokai").setup({ palette = require("monokai") })
+    use "rebelot/kanagawa.nvim"
+    vim.cmd("colorscheme kanagawa-dragon")
+
+	-- use("tanvirtin/monokai.nvim")
+	-- require("monokai").setup({ palette = require("monokai") })
+
 	-- Adwaita
 	-- use({
 	--   'Mofiqul/adwaita.nvim',
