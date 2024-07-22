@@ -41,3 +41,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- Remap Ctrl+n/e/i/o to h/j/k/l
+vim.keymap.set("n", "<C-m>", "h")
+vim.keymap.set("n", "<C-n>", "j")
+vim.keymap.set("n", "<C-e>", "k")
+vim.keymap.set("n", "<C-i>", "l")
