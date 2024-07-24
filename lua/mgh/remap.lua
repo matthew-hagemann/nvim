@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pp", ":Ex<CR>")
 
+-- I keep needing to return to the last buffer after a definiton jump
+vim.keymap.set("n", "<leader>bp", ":b#<CR>")
+
 -- Remap window navigation commands
 local window_nav = {"h", "j", "k", "l", "s", "v"}
 for _, key in ipairs(window_nav) do
