@@ -30,6 +30,10 @@ return require("packer").startup(function(use)
 	-- formatter
 	use("mhartington/formatter.nvim")
 
+    -- nicer netrw
+	use("prichrd/netrw.nvim")
+    require("netrw").setup({})
+
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
 
@@ -42,8 +46,8 @@ return require("packer").startup(function(use)
 	-- end
 	-- })
 
-    use "rebelot/kanagawa.nvim"
-    vim.cmd("colorscheme kanagawa-dragon")
+	use("rebelot/kanagawa.nvim")
+	vim.cmd("colorscheme kanagawa-dragon")
 
 	-- use("tanvirtin/monokai.nvim")
 	-- require("monokai").setup({ palette = require("monokai") })

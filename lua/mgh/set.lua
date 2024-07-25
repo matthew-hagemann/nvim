@@ -1,5 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.g.netrw_keepdir = 0
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -25,4 +26,6 @@ vim.g.netrw_liststyle = 3
 
 -- Remove the quickhelp banner 
 vim.g.netrw_banner = 0
+
+vim.g.netrw_winsize = 15
 

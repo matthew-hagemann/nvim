@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pp", ":Ex<CR>")
+vim.keymap.set("n", "<leader>pp", ":Lexplore<CR>")
 
 -- I keep needing to return to the last buffer after a definiton jump
 vim.keymap.set("n", "<leader>bp", ":b#<CR>")
