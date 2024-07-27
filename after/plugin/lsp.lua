@@ -46,3 +46,5 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })
+
+vim.lsp.inlay_hint.enable(true)
