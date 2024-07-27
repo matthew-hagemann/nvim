@@ -1,9 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pp", ":Lexplore<CR>")
 
--- I keep needing to return to the last buffer after a definiton jump
-vim.keymap.set("n", "<leader>bp", ":b#<CR>")
-
 -- Remap window navigation commands
 local window_nav = {"h", "j", "k", "l", "s", "v"}
 for _, key in ipairs(window_nav) do
@@ -45,14 +42,19 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- Remap Alt+n/e/i/o to h/j/k/l
-vim.keymap.set("n", "<M-m>", "h")
-vim.keymap.set("n", "<M-n>", "j")
-vim.keymap.set("n", "<M-e>", "k")
-vim.keymap.set("n", "<M-i>", "l")
+-- Remap Alt+n/e/i/o to h/j/k/l in normal and visual mode
+vim.keymap.set({"n", "v"}, "<M-m>", "h")
+vim.keymap.set({"n", "v"}, "<M-n>", "j")
+vim.keymap.set({"n", "v"}, "<M-e>", "k")
+vim.keymap.set({"n", "v"}, "<M-i>", "l")
 
-vim.keymap.set("n", "<C-m>", "h")
-vim.keymap.set("n", "<C-n>", "j")
-vim.keymap.set("n", "<C-e>", "k")
-vim.keymap.set("n", "<C-i>", "l")
+-- Remap Ctrl+m/n/e/i to h/j/k/l in normal and visual mode
+vim.keymap.set({"n", "v"}, "<C-m>", "h")
+vim.keymap.set({"n", "v"}, "<C-n>", "j")
+vim.keymap.set({"n", "v"}, "<C-e>", "k")
+vim.keymap.set({"n", "v"}, "<C-i>", "l")
+
+-- Set leader b n and leader b p to jump list forward and back
+vim.keymap.set("n", "<leader>bn", "<C-i>")
+vim.keymap.set("n", "<leader>bp", "<C-o>")
 
