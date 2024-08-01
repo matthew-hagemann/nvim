@@ -37,12 +37,26 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "rust_analyzer", "gopls", "golangci_lint_ls", "clangd", "lua_ls", "ruff" },
+	ensure_installed = { "rust_analyzer", "gopls", "golangci_lint_ls", "clangd", "lua_ls", "ruff", "pylsp", "ruff_lsp" },
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
 			local lua_opts = lsp_zero.nvim_lua_ls()
 			require("lspconfig").lua_ls.setup(lua_opts)
+		end,
+		pylsp = function()
+			require("lspconfig").pylsp.setup({
+				settings = {
+					pylsp = {
+						plugins = {
+							pylint = { enabled = false },
+							pyflakes = { enabled = false },
+							pycodestyle = { enabled = false },
+							-- Add more linters to disable if needed
+						},
+					},
+				},
+			})
 		end,
 	},
 })
