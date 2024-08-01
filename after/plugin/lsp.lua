@@ -17,7 +17,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'rust_analyzer', 'gopls', 'golangci_lint_ls', 'clangd', 'lua_ls'},
+  ensure_installed = {'rust_analyzer', 'gopls', 'golangci_lint_ls', 'clangd', 'lua_ls', 'pylsp'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
