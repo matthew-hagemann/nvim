@@ -44,15 +44,16 @@ require("mason-lspconfig").setup({
 			local lua_opts = lsp_zero.nvim_lua_ls()
 			require("lspconfig").lua_ls.setup(lua_opts)
 		end,
-		pylsp = function()
-			require("lspconfig").pylsp.setup({
+		pyright = function()
+			require("lspconfig").pyright.setup({
 				settings = {
-					pylsp = {
-						plugins = {
-							pylint = { enabled = false },
-							pyflakes = { enabled = false },
-							pycodestyle = { enabled = false },
-							-- Add more linters to disable if needed
+					python = {
+						analysis = {
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							diagnosticMode = "openFilesOnly",
+							-- Ignore line length
+							reportLineLength = "none",
 						},
 					},
 				},
