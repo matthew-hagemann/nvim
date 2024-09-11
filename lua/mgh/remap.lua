@@ -48,12 +48,6 @@ vim.keymap.set({"n", "v"}, "<M-n>", "j")
 vim.keymap.set({"n", "v"}, "<M-e>", "k")
 vim.keymap.set({"n", "v"}, "<M-i>", "l")
 
--- Remap Ctrl+m/n/e/i to h/j/k/l in normal and visual mode
-vim.keymap.set({"n", "v"}, "<C-m>", "h")
-vim.keymap.set({"n", "v"}, "<C-n>", "j")
-vim.keymap.set({"n", "v"}, "<C-e>", "k")
-vim.keymap.set({"n", "v"}, "<C-i>", "l")
-
 -- Set leader b n and leader b p to jump list forward and back
 vim.keymap.set("n", "<leader>bn", "<C-i>")
 vim.keymap.set("n", "<leader>bp", "<C-o>")
