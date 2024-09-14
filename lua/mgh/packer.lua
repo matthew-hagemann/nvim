@@ -30,9 +30,9 @@ return require("packer").startup(function(use)
 	-- formatter
 	use("mhartington/formatter.nvim")
 
-    -- nicer netrw
+	-- nicer netrw
 	use("prichrd/netrw.nvim")
-    require("netrw").setup({})
+	require("netrw").setup({})
 
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
@@ -60,6 +60,15 @@ return require("packer").startup(function(use)
 	--   vim.cmd('colorscheme adwaita')
 	--   end
 	-- })
+	--
+	use({
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+	})
+    require("flutter-tools").setup {} -- use defaults
 
 	-- Undo tree for viewing a diagram of how we got here
 	use("mbbill/undotree")
