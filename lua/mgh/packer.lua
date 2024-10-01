@@ -47,7 +47,10 @@ return require("packer").startup(function(use)
 	-- })
 
 	use("rebelot/kanagawa.nvim")
-	vim.cmd("colorscheme kanagawa-dragon")
+	vim.cmd("colorscheme kanagawa")
+
+    -- LSP status
+    use("nvim-lua/lsp-status.nvim")
 
 	-- use("tanvirtin/monokai.nvim")
 	-- require("monokai").setup({ palette = require("monokai") })
