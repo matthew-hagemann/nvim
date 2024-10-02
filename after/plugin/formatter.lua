@@ -1,4 +1,3 @@
-local util = require("formatter.util")
 require("formatter").setup({
 	logging = true,
 
@@ -17,6 +16,9 @@ require("formatter").setup({
 		},
 		python = {
 			require("formatter.filetypes.python").black,
+		},
+		dart = {
+			require("formatter.filetypes.dart").dartformat,
 		},
 	},
 })
