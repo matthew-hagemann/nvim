@@ -20,18 +20,18 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 	})
 
+	use({
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup({})
+		end,
+	})
+
 	-- lualine
 	use("nvim-tree/nvim-web-devicons")
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
-	})
-	-- lualine lsp
-	use({
-		"linrongbin16/lsp-progress.nvim",
-		config = function()
-			require("lsp-progress").setup()
-		end,
 	})
 
 	-- formatter
