@@ -26,6 +26,13 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
+	-- lualine lsp
+	use({
+		"linrongbin16/lsp-progress.nvim",
+		config = function()
+			require("lsp-progress").setup()
+		end,
+	})
 
 	-- formatter
 	use("mhartington/formatter.nvim")
