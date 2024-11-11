@@ -49,8 +49,8 @@ return require("packer").startup(function(use)
 	use("rebelot/kanagawa.nvim")
 	vim.cmd("colorscheme kanagawa")
 
-    -- LSP status
-    use("nvim-lua/lsp-status.nvim")
+	-- LSP status
+	use("nvim-lua/lsp-status.nvim")
 
 	-- use("tanvirtin/monokai.nvim")
 	-- require("monokai").setup({ palette = require("monokai") })
@@ -71,7 +71,7 @@ return require("packer").startup(function(use)
 			"stevearc/dressing.nvim", -- optional for vim.ui.select
 		},
 	})
-    require("flutter-tools").setup {} -- use defaults
+	require("flutter-tools").setup({}) -- use defaults
 
 	-- Undo tree for viewing a diagram of how we got here
 	use("mbbill/undotree")
@@ -85,6 +85,21 @@ return require("packer").startup(function(use)
 		cmd = "Trouble",
 		config = function()
 			require("trouble").setup({}) -- for default options
+		end,
+	})
+
+	-- neotest
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-neotest/nvim-nio",
+			"nvim-lua/plenary.nvim",
+			"antoinemadec/FixCursorHold.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"sidlatau/neotest-dart",
+		},
+		config = function()
+			require("neotest") -- load the neotest.lua file
 		end,
 	})
 
