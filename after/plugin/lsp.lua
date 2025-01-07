@@ -40,6 +40,15 @@ require("mason-lspconfig").setup({
 	ensure_installed = { "rust_analyzer", "gopls", "golangci_lint_ls", "clangd", "lua_ls", "ruff", "pylsp" },
 	handlers = {
 		lsp_zero.default_setup,
+		clangd = function()
+			require("lspconfig").clangd.setup({
+				cmd = {
+					"clangd",
+					"--compile-commands-dir=_build", -- Point to compile_commands.json
+				},
+				root_dir = require("lspconfig").util.root_pattern("compile_commands.json", ".git"),
+			})
+		end,
 		lua_ls = function()
 			local lua_opts = lsp_zero.nvim_lua_ls()
 			require("lspconfig").lua_ls.setup(lua_opts)
