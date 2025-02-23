@@ -1,7 +1,38 @@
+local colors = {
+    white = '#f8f8f2',
+    black = '#000000',
+}
+
+local custom_dracula = require'lualine.themes.dracula'
+custom_dracula.normal.a.fg= colors.white
+custom_dracula.normal.a.bg = colors.black
+custom_dracula.normal.b.bg = colors.black
+custom_dracula.normal.c.bg = colors.black
+custom_dracula.insert.a.fg= colors.white
+custom_dracula.insert.a.bg = colors.black
+custom_dracula.insert.b.bg = colors.black
+custom_dracula.insert.c.bg = colors.black
+custom_dracula.visual.a.fg= colors.white
+custom_dracula.visual.a.bg = colors.black
+custom_dracula.visual.b.bg = colors.black
+custom_dracula.visual.c.bg = colors.black
+custom_dracula.replace.a.fg= colors.white
+custom_dracula.replace.a.bg = colors.black
+custom_dracula.replace.b.bg = colors.black
+custom_dracula.replace.c.bg = colors.black
+custom_dracula.command.a.fg= colors.white
+custom_dracula.command.a.bg = colors.black
+custom_dracula.command.b.bg = colors.black
+custom_dracula.command.c.bg = colors.black
+custom_dracula.inactive.a.fg= colors.white
+custom_dracula.inactive.a.bg = colors.black
+custom_dracula.inactive.b.bg = colors.black
+custom_dracula.inactive.c.bg = colors.black
+
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = custom_dracula,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {

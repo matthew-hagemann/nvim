@@ -114,6 +114,12 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  dracula = {
+    config = { "\27LJ\2\n…\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0å\1            augroup DraculaCustomization\n\t\t\t\tautocmd!\n\t\t\t\tautocmd ColorScheme dracula highlight! Normal guibg=#000000\n\t\t\t\tautocmd ColorScheme dracula highlight! NonText guibg=#000000\n\t\t\taugroup END\n\n\t\t\tcolorscheme dracula\n\t\t\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/dracula",
+    url = "https://github.com/dracula/vim"
+  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -133,11 +139,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/home/matt/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -247,6 +248,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: dracula
+time([[Config for dracula]], true)
+try_loadstring("\27LJ\2\n…\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0å\1            augroup DraculaCustomization\n\t\t\t\tautocmd!\n\t\t\t\tautocmd ColorScheme dracula highlight! Normal guibg=#000000\n\t\t\t\tautocmd ColorScheme dracula highlight! NonText guibg=#000000\n\t\t\taugroup END\n\n\t\t\tcolorscheme dracula\n\t\t\bcmd\bvim\0", "config", "dracula")
+time([[Config for dracula]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\fneotest\frequire\0", "config", "neotest")

@@ -20,13 +20,6 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 	})
 
-	use({
-		"j-hui/fidget.nvim",
-		config = function()
-			require("fidget").setup({})
-		end,
-	})
-
 	-- lualine
 	use("nvim-tree/nvim-web-devicons")
 	use({
@@ -44,33 +37,22 @@ return require("packer").startup(function(use)
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
 
-	-- Theme
-	-- use({
-	-- 'rose-pine/neovim',
-	-- as = 'rose-pine',
-	-- config = function()
-	-- vim.cmd('colorscheme rose-pine')
-	-- end
-	-- })
+	use({
+		"dracula/vim",
+		as = "dracula",
+		config = function()
+			vim.cmd([[
+            augroup DraculaCustomization
+				autocmd!
+				autocmd ColorScheme dracula highlight! Normal guibg=#000000
+				autocmd ColorScheme dracula highlight! NonText guibg=#000000
+			augroup END
 
-	use("rebelot/kanagawa.nvim")
-	vim.cmd("colorscheme kanagawa")
+			colorscheme dracula
+		]])
+		end,
+	})
 
-	-- LSP status
-	use("nvim-lua/lsp-status.nvim")
-
-	-- use("tanvirtin/monokai.nvim")
-	-- require("monokai").setup({ palette = require("monokai") })
-
-	-- Adwaita
-	-- use({
-	--   'Mofiqul/adwaita.nvim',
-	--   config = function()
-	--   vim.g.adwaita_darker = true             -- for darker version
-	--   vim.cmd('colorscheme adwaita')
-	--   end
-	-- })
-	--
 	use({
 		"akinsho/flutter-tools.nvim",
 		requires = {
