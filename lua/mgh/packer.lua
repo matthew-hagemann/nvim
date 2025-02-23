@@ -46,6 +46,8 @@ return require("packer").startup(function(use)
 				autocmd!
 				autocmd ColorScheme dracula highlight! Normal guibg=#000000
 				autocmd ColorScheme dracula highlight! NonText guibg=#000000
+                autocmd ColorScheme dracula highlight! VertSplit guibg=#000000
+                autocmd ColorScheme dracula highlight! WinSeparator guibg=#000000
 			augroup END
 
 			colorscheme dracula
