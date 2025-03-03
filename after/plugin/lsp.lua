@@ -12,7 +12,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vws", function()
 		vim.lsp.buf.workspace_symbol()
 	end, opts)
-	vim.keymap.set("n", "<leader>vd", function()
+	vim.keymap.set("n", "<leader>xd", function()
 		vim.diagnostic.open_float()
 	end, opts)
 	vim.keymap.set("n", "[d", function()
@@ -91,7 +91,7 @@ cmp.setup({
 	}),
 })
 
-vim.lsp.inlay_hint.enable(true)
+vim.lsp.inlay_hint.enable(false)
 
 -- Workaround for invalid offset errors in Rust Analyzer diagnostics
 -- https://github.com/neovim/neovim/issues/30985#issuecomment-2447329525
