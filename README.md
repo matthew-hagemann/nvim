@@ -1,5 +1,7 @@
 # init.lua
 
+Updated to work with nvim 0.11.2
+
 ## Installation
 
 Assuming you were good and installed the dotfiles how I asked in the README above:
