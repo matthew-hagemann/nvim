@@ -33,13 +33,17 @@ return require("packer").startup(function(use)
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
 
-
-    use {
-        'shaunsingh/solarized.nvim',
-        config = function()
-            vim.cmd.colorscheme('solarized')
-        end
-    }
+use {
+    'maxmx03/solarized.nvim',
+    config = function()
+      vim.o.termguicolors = true
+      vim.o.background = 'light'
+      ---@type solarized
+      local solarized = require('solarized')
+      solarized.setup({})
+      vim.cmd.colorscheme 'solarized'
+    end
+}
 
 	use({
 		"akinsho/flutter-tools.nvim",

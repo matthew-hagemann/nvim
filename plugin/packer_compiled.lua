@@ -211,10 +211,10 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["solarized.nvim"] = {
-    config = { "\27LJ\2\n=\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\14solarized\16colorscheme\bcmd\bvim\0" },
+    config = { "\27LJ\2\n¤\1\0\0\4\0\n\0\0206\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0006\0\5\0'\2\6\0B\0\2\0029\1\a\0004\3\0\0B\1\2\0016\1\0\0009\1\b\0019\1\t\1'\3\6\0B\1\2\1K\0\1\0\16colorscheme\bcmd\nsetup\14solarized\frequire\nlight\15background\18termguicolors\6o\bvim\0" },
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/shaunsingh/solarized.nvim"
+    url = "https://github.com/maxmx03/solarized.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -249,7 +249,7 @@ try_loadstring("\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\fneotest\
 time([[Config for neotest]], false)
 -- Config for: solarized.nvim
 time([[Config for solarized.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\14solarized\16colorscheme\bcmd\bvim\0", "config", "solarized.nvim")
+try_loadstring("\27LJ\2\n¤\1\0\0\4\0\n\0\0206\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0006\0\5\0'\2\6\0B\0\2\0029\1\a\0004\3\0\0B\1\2\0016\1\0\0009\1\b\0019\1\t\1'\3\6\0B\1\2\1K\0\1\0\16colorscheme\bcmd\nsetup\14solarized\frequire\nlight\15background\18termguicolors\6o\bvim\0", "config", "solarized.nvim")
 time([[Config for solarized.nvim]], false)
 
 -- Command lazy-loads
