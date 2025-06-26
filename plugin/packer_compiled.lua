@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/matt/.cache/nvim/packer_hererocks/2.1.1713484068/share/lua/5.1/?.lua;/home/matt/.cache/nvim/packer_hererocks/2.1.1713484068/share/lua/5.1/?/init.lua;/home/matt/.cache/nvim/packer_hererocks/2.1.1713484068/lib/luarocks/rocks-5.1/?.lua;/home/matt/.cache/nvim/packer_hererocks/2.1.1713484068/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/matt/.cache/nvim/packer_hererocks/2.1.1713484068/lib/lua/5.1/?.so"
+local package_path_str = "/home/matt/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/home/matt/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/home/matt/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/home/matt/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/matt/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -114,12 +114,6 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  dracula = {
-    config = { "\27LJ\2\n¦\3\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0†\3            augroup DraculaCustomization\n\t\t\t\tautocmd!\n\t\t\t\tautocmd ColorScheme dracula highlight! Normal guibg=#000000\n\t\t\t\tautocmd ColorScheme dracula highlight! NonText guibg=#000000\n                autocmd ColorScheme dracula highlight! VertSplit guibg=#000000\n                autocmd ColorScheme dracula highlight! WinSeparator guibg=#000000\n\t\t\taugroup END\n\n\t\t\tcolorscheme dracula\n\t\t\bcmd\bvim\0" },
-    loaded = true,
-    path = "/home/matt/.local/share/nvim/site/pack/packer/start/dracula",
-    url = "https://github.com/dracula/vim"
-  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -144,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/matt/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -221,6 +210,12 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["solarized.nvim"] = {
+    config = { "\27LJ\2\n=\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\14solarized\16colorscheme\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/solarized.nvim",
+    url = "https://github.com/shaunsingh/solarized.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -252,10 +247,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\fneotest\frequire\0", "config", "neotest")
 time([[Config for neotest]], false)
--- Config for: dracula
-time([[Config for dracula]], true)
-try_loadstring("\27LJ\2\n¦\3\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0†\3            augroup DraculaCustomization\n\t\t\t\tautocmd!\n\t\t\t\tautocmd ColorScheme dracula highlight! Normal guibg=#000000\n\t\t\t\tautocmd ColorScheme dracula highlight! NonText guibg=#000000\n                autocmd ColorScheme dracula highlight! VertSplit guibg=#000000\n                autocmd ColorScheme dracula highlight! WinSeparator guibg=#000000\n\t\t\taugroup END\n\n\t\t\tcolorscheme dracula\n\t\t\bcmd\bvim\0", "config", "dracula")
-time([[Config for dracula]], false)
+-- Config for: solarized.nvim
+time([[Config for solarized.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\14solarized\16colorscheme\bcmd\bvim\0", "config", "solarized.nvim")
+time([[Config for solarized.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

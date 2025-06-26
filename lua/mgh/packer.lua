@@ -20,12 +20,8 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 	})
 
-	-- lualine
+	-- web devicons
 	use("nvim-tree/nvim-web-devicons")
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "nvim-tree/nvim-web-devicons", opt = true },
-	})
 
 	-- formatter
 	use("mhartington/formatter.nvim")
@@ -37,23 +33,13 @@ return require("packer").startup(function(use)
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
 
-	use({
-		"dracula/vim",
-		as = "dracula",
-		config = function()
-			vim.cmd([[
-            augroup DraculaCustomization
-				autocmd!
-				autocmd ColorScheme dracula highlight! Normal guibg=#000000
-				autocmd ColorScheme dracula highlight! NonText guibg=#000000
-                autocmd ColorScheme dracula highlight! VertSplit guibg=#000000
-                autocmd ColorScheme dracula highlight! WinSeparator guibg=#000000
-			augroup END
 
-			colorscheme dracula
-		]])
-		end,
-	})
+    use {
+        'shaunsingh/solarized.nvim',
+        config = function()
+            vim.cmd.colorscheme('solarized')
+        end
+    }
 
 	use({
 		"akinsho/flutter-tools.nvim",
