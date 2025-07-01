@@ -17,9 +17,9 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").black,
 		},
-		dart = {
-			require("formatter.filetypes.dart").dartformat,
-		},
+		-- dart = {
+		-- 	require("formatter.filetypes.dart").dartformat,
+		-- },
 	},
 })
 
