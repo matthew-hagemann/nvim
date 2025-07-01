@@ -49,10 +49,14 @@ use {
 		"akinsho/flutter-tools.nvim",
 		requires = {
 			"nvim-lua/plenary.nvim",
-			"stevearc/dressing.nvim", -- optional for vim.ui.select
+			"stevearc/dressing.nvim",
 		},
+		config = function()
+			require("flutter-tools").setup({
+				fvm = true
+			})
+		end,
 	})
-	require("flutter-tools").setup({}) -- use defaults
 
 	-- Undo tree for viewing a diagram of how we got here
 	use("mbbill/undotree")
