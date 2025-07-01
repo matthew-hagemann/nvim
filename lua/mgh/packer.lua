@@ -26,9 +26,6 @@ return require("packer").startup(function(use)
 	-- formatter
 	use("mhartington/formatter.nvim")
 
-	-- nicer netrw
-	use("prichrd/netrw.nvim")
-	require("netrw").setup({})
 
 	-- Debugging
 	use({ "mfussenegger/nvim-dap", requires = { "rcarriga/nvim-dap-ui" } })
