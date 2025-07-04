@@ -22,8 +22,8 @@ vim.keymap.set("n", "<leader>to", ":tabonly<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Remap search navigation (since n is now down movement)
-vim.keymap.set("n", "k", "nzzzv")
-vim.keymap.set("n", "K", "Nzzzv")
+vim.keymap.set("n", "j", "nzzzv")
+vim.keymap.set("n", "J", "Nzzzv")
 
 -- Leader p doesn't lose what we are pasting!
 vim.keymap.set("x", "<leader>p", [["_dP]])
