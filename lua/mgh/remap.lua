@@ -58,12 +58,6 @@ vim.keymap.set("n", "H", "E") -- H goes to end of WORD
 -- Fix text objects broken by Colemak remapping
 vim.keymap.set({"v", "o"}, "l", "i") -- this swaps 'l' to behaving as the inside modifier for text selecteions
 
--- Remap Alt+mnei to hjkl in normal and visual mode
-vim.keymap.set({"n", "v"}, "<M-m>", "h")
-vim.keymap.set({"n", "v"}, "<M-n>", "j")
-vim.keymap.set({"n", "v"}, "<M-e>", "k")
-vim.keymap.set({"n", "v"}, "<M-i>", "l")
-
 -- Set leader b n and leader b p to jump list forward and back
 vim.keymap.set("n", "<leader>bn", "<C-i>")
 vim.keymap.set("n", "<leader>bp", "<C-o>")
