@@ -55,6 +55,9 @@ vim.keymap.set("n", "L", "I") -- L enters insert at start of line
 vim.keymap.set("n", "h", "e") -- h goes to end of word
 vim.keymap.set("n", "H", "E") -- H goes to end of WORD
 
+-- Fix text objects broken by Colemak remapping
+vim.keymap.set({"v", "o"}, "l", "i") -- this swaps 'l' to behaving as the inside modifier for text selecteions
+
 -- Remap Alt+mnei to hjkl in normal and visual mode
 vim.keymap.set({"n", "v"}, "<M-m>", "h")
 vim.keymap.set({"n", "v"}, "<M-n>", "j")
