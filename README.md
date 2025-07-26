@@ -17,14 +17,116 @@ Run `:PackerSync` from inside nvim
 
 You will need to see what lsp's are upset from there, glhf!
 
-## Keybindings
+## Keybindings Reference
 
-### General
+### Leader Key
+- **Leader key**: `<space>`
 
-- `leader` w (h/j/k/l/s/v): The usual window suspects
+### Core Navigation (Colemak Layout)
+- **Basic movement**: `mnei` (replaces `hjkl`)
+  - `m`: Left (h)
+  - `n`: Down (j) 
+  - `e`: Up (k)
+  - `i`: Right (l)
+- **Displaced keys**:
+  - `l`: Enter insert mode (was `i`)
+  - `L`: Insert at beginning of line (was `I`)
+  - `h`: End of word (was `e`)
+  - `H`: End of WORD (was `E`)
+- **Text objects**: `l` acts as "inside" modifier for visual/operator modes
 
-### Netrw
+### Search and Movement
+- **Search navigation**: 
+  - `j`: Next search result (was `n`)
+  - `J`: Previous search result (was `N`)
+- **Centered scrolling**:
+  - `<C-d>`: Half page down, centered
+  - `<C-u>`: Half page up, centered
+- **Jump list**:
+  - `<leader>bn`: Jump forward (`<C-i>`)
+  - `<leader>bp`: Jump backward (`<C-o>`)
 
+### File Management
+- **File explorer**: `<leader>pp` - Toggle Lexplore
+- **Telescope**:
+  - `<leader>ff`: Find files
+  - `<leader>fg`: Live grep
+  - `<leader>fb`: Buffers
+  - `<leader>fh`: Help tags
+  - `<C-p>`: Git files
+
+### Window Management
+- **Window navigation** (Colemak): `<leader>w[mnei]` for directional movement
+- **Window actions**:
+  - `<leader>ws`: Split horizontally
+  - `<leader>wv`: Split vertically  
+  - `<leader>wc`: Close window
+
+### Tab Management
+- `<leader>tn`: New tab
+- `<leader>tt`: Next tab
+- `<leader>tm`: Move tab (prompts for position)
+- `<leader>tc`: Close tab
+- `<leader>to`: Close all other tabs
+
+### LSP (Language Server Protocol)
+- **Navigation**:
+  - `gd`: Go to definition
+  - `K`: Hover documentation
+- **Code actions**:
+  - `<leader>ca`: Code actions
+  - `<leader>cr`: Show references
+  - `<leader>cn`: Rename symbol
+  - `<leader>vws`: Workspace symbols
+- **Diagnostics**:
+  - `<leader>xd`: Open diagnostic float
+  - `[d`: Next diagnostic
+  - `]d`: Previous diagnostic
+- **Completion** (Insert mode):
+  - `<C-p>`: Previous item
+  - `<C-n>`: Next item
+  - `<CR>`: Confirm selection
+  - `<C-Space>`: Trigger completion
+  - `<C-h>`: Signature help
+
+### Code Editing
+- **Formatting**: 
+  - `<leader>f`: LSP format
+  - `<leader>cf`: Formatter.nvim format
+- **Comments**: `<leader>c/` - Toggle comment (normal/visual)
+- **Text manipulation**:
+  - `<leader>p`: Paste without losing clipboard (visual mode)
+  - `<leader>y`: Yank to system clipboard
+  - `<leader>Y`: Yank line to system clipboard
+  - `<leader>s`: Substitute word under cursor
+  - `<leader>x`: Make file executable
+
+### Testing (Neotest)
+- `<leader>tr`: Run nearest test
+- `<leader>tR`: Run file tests
+- `<leader>to`: Show test output
+- `<leader>tO`: Toggle output panel
+- `<leader>tn`: Jump to next test
+- `<leader>tp`: Jump to previous test
+- `<leader>ts`: Test summary
+
+### Debugging & Diagnostics (Trouble.nvim)
+- `<leader>xx`: Toggle diagnostics
+- `<leader>xX`: Buffer diagnostics
+- `<leader>cs`: Symbols
+- `<leader>cl`: LSP definitions/references
+- `<leader>xL`: Location list
+- `<leader>xQ`: Quickfix list
+
+### Tools & Utilities
+- **Undotree**: `<leader>u` - Toggle undo tree
+- **Copilot**:
+  - `<leader>ce`: Enable Copilot
+  - `<leader>cd`: Disable Copilot
+- **Tmux**: `<C-f>` - Open tmux sessionizer
+- **Config**: `<leader><leader>` - Source/reload config
+
+### Netrw (File Explorer)
 - `%`: Create new file
 - `d`: Create new directory
 - `Enter`: Open selected file/directory
@@ -43,31 +145,6 @@ You will need to see what lsp's are upset from there, glhf!
 - `c`: Copy file/directory
 - `yy`: Yank file path
 - `.`: Sort files
-
-### Normal Mode
-
-- `leader` pv: Open Netrw
-- `leader` u: Undo tree
-- `leader` ff: Find files
-- `leader` fg: Live grep
-- `leader` fb: Find in buffers
-- `leader` fh: Help tags
-- `Ctrl + p`: Find in project (git search)
-
-### LSP (Language Server Protocol)
-
-These keybindings are defined in `lsp.lua` for enhanced development workflow with LSP features:
-
-- `gd`: Go to definition
-- `K`: Show hover information
-- `leader` vws: Search workspace symbols
-- `leader` vd: Open diagnostics float
-- `[d`: Go to next diagnostic
-- `]d`: Go to previous diagnostic
-- `leader` vca: Show available code actions
-- `leader` vrr: Show references for the symbol under the cursor
-- `leader` vrn: Rename the symbol under the cursor
-- `Ctrl-h` (in Insert mode): Show signature help
 
 ## Packer
 
