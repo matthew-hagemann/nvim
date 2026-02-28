@@ -120,6 +120,7 @@ _G.packer_plugins = {
     url = "https://github.com/stevearc/dressing.nvim"
   },
   ["flutter-tools.nvim"] = {
+    config = { "\27LJ\2\nG\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\bfvm\2\nsetup\18flutter-tools\frequire\0" },
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
     url = "https://github.com/akinsho/flutter-tools.nvim"
@@ -159,11 +160,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/neotest-dart",
     url = "https://github.com/sidlatau/neotest-dart"
-  },
-  ["netrw.nvim"] = {
-    loaded = true,
-    path = "/home/matt/.local/share/nvim/site/pack/packer/start/netrw.nvim",
-    url = "https://github.com/prichrd/netrw.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -210,12 +206,6 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["solarized.nvim"] = {
-    config = { "\27LJ\2\n¤\1\0\0\4\0\n\0\0206\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0006\0\5\0'\2\6\0B\0\2\0029\1\a\0004\3\0\0B\1\2\0016\1\0\0009\1\b\0019\1\t\1'\3\6\0B\1\2\1K\0\1\0\16colorscheme\bcmd\nsetup\14solarized\frequire\nlight\15background\18termguicolors\6o\bvim\0" },
-    loaded = true,
-    path = "/home/matt/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/maxmx03/solarized.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -243,14 +233,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: flutter-tools.nvim
+time([[Config for flutter-tools.nvim]], true)
+try_loadstring("\27LJ\2\nG\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\bfvm\2\nsetup\18flutter-tools\frequire\0", "config", "flutter-tools.nvim")
+time([[Config for flutter-tools.nvim]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\fneotest\frequire\0", "config", "neotest")
 time([[Config for neotest]], false)
--- Config for: solarized.nvim
-time([[Config for solarized.nvim]], true)
-try_loadstring("\27LJ\2\n¤\1\0\0\4\0\n\0\0206\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0006\0\5\0'\2\6\0B\0\2\0029\1\a\0004\3\0\0B\1\2\0016\1\0\0009\1\b\0019\1\t\1'\3\6\0B\1\2\1K\0\1\0\16colorscheme\bcmd\nsetup\14solarized\frequire\nlight\15background\18termguicolors\6o\bvim\0", "config", "solarized.nvim")
-time([[Config for solarized.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
